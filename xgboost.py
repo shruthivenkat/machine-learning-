@@ -20,13 +20,10 @@ seed = 7
 test_size = 0.20
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, Y, test_size=test_size, random_state=seed)
 
-
-# fit model no training data
 model = XGBClassifier()
 model.fit(X_train, y_train)
 print(model)
 
-# make predictions for test data
 y_pred = model.predict(X_test)
 predictions = [value for value in y_pred]
 
