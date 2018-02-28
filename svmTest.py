@@ -13,18 +13,27 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn import svm
 names=['class','mt1','mt5','mt10','mt1c','mt5c','doctorate','masters','bilingual','publications','skills','interned','gender']
-dataset=pandas.read_csv(r'C:/Users/miriam s/Documents/project_2018_dataset_draft1_csv_binary.csv',encoding="ISO-8859-1",header=None,names=names)
+dataset=pandas.read_csv(r'C:/Users/shruthi/Downloads/project_2018_dataset_draft1_csv_binary.csv',encoding="ISO-8859-1",header=None,names=names)
+dataset = dataset.replace({'y':1,'n':0,'M':1,'F':0})
 array=dataset.values
-X=array[:,1:12]
+X=array[:,[1,2,3,4,5,6,7,8,9,10,11,12]]
 Y=array[:,0]
 validation_size=0.20
 seed=7
 X_train,X_validation,Y_train,Y_validation=model_selection.train_test_split(X,Y,test_size=validation_size,random_state=seed)
 seed=7
+scoring='accuracy'
+model=SVC()
+results=[]
+kfold=model_selection.KFold(n_splits=10,random_state=seed)
+cv_results=model_selection.cross_val_score(model,X_train,Y_train,cv=kfold,scoring=scoring)
+results.append(cv_results)
+msg="SVM: %f (%f)"%(cv_results.mean(),cv_results.std())
+print(msg)
 svc=svm.SVC(kernel='linear',C=1,gamma='auto').fit(X,Y)
 svc.fit(X_train,Y_train)
 predictions=svc.predict(X_validation)
 print(accuracy_score(Y_validation,predictions))
 print(confusion_matrix(Y_validation,predictions))
 print(classification_report(Y_validation,predictions))
-print(svc.predict([[1,0,0,1,0,0,0,1,0,1,0]]))
+print(svc.predict([[1,1,0,1,0,0,0,1,0,0,0,1]]))
