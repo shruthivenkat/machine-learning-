@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company Recommender system</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      background-color: #FFA500; //orange	
+      color: #FFF;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 0px;}
+  .bg-1 { 
+      background-color: #FFA500; /* orange */
+      color: #ffffff;
+line-height: 4;
+  }
+ .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+line-height: .5;
+  }
+  .container-fluid {
+      padding-top: 25px;
+      padding-bottom: 60px;letter-spacing: 7px;
+  }
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;background-color: #ffffff;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 5;
+      font-size: 12px;
+      letter-spacing: 8px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .footer {
+	font: 20px Montserrat, sans-serif;
+	position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2f2f2f;
+   color: white;padding-bottom: 1px;
+   text-align: center;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	<b><h3>Company Recommender system</h3> </b>
+     </div>
+   </div>
+</nav>
+
+<div class="container">
+  <h2>Fill in the details</h2>
+  <form class="form-inline" action="C:\xampp\htdocs\requirement\phppage1.php" method="post">
+  
+    <div class="form-group">
+      <label for="manager" class="col-lg-5 control-label">More than 1 yr of experience</label>
+      <input type="radio" value="yes" align="right">Yes<br>
+      <input type="radio" value="no" align="right"> Female<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="dept" class="col-lg-5 control-label">More than 5 yrs of experience</label>
+      <input type="radio" value="yes" align="right">Yes<br>
+      <input type="radio" value="no" align="right">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="jobdesc" class="col-lg-5 control-label">More than 10 yrs of experience</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="project" class="col-lg-5 control-label">More than 1 yr of expereince in the current company</label>
+      <input type="radio" value="yes"> Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="resources" class="col-lg-5 control-label">More than 5 yrs of experience in the cureent company</label>
+      <input type="radio"  value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Doctorate?</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Master degree?</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Are you multilinguistic (except english and mothertounge)?</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Publications/patents?</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Have you been an intern?</label>
+      <input type="radio" value="yes">Yes<br>
+      <input type="radio" value="no">No<br>
+    </div><br><br>
+    <div class="form-group">
+      <label for="experience" class="col-lg-5 control-label">Gender</label>
+      <input type="radio" value="male"> Male<br>
+      <input type="radio" value="female"> Female<br>
+
+    </div><br><br>
+  
+  </form>
+ 
+</div>
+<button type="submit" class="btn btn-success">Submit</button><br>
+
+
+<footer class="footer container-fluid bg-4 text-center">
+  <p>XXX<span class="glyphicon glyphicon-copyright-mark">2018</span></p> 
+</footer>
+
+</body>
+</html>
